@@ -1,13 +1,14 @@
 package app;
 
 import data_access.FileUserDataAccessObject;
-import data_access.UserSignupDataAccessInterface;
 import entity.CommonUserFactory;
 import entity.UserFactory;
 import interface_adapter.*;
+import interface_adapter.clear_users.ClearViewModel;
 import use_case.SignupInputBoundary;
 import use_case.SignupInteractor;
 import use_case.SignupOutputBoundary;
+import use_case.UserSignupDataAccessInterface;
 import view.SignupView;
 
 import javax.swing.*;
@@ -42,5 +43,12 @@ public class SignupUseCaseFactory {
                 userDataAccessObject, signupOutputBoundary, userFactory);
 
         return new SignupController(userSignupInteractor);
+    }
+
+    public static SignupView create(ViewManagerModel viewManagerModel,
+            interface_adapter.login.LoginViewModel loginViewModel,
+            interface_adapter.signup.SignupViewModel signupViewModel,
+            ClearViewModel clearViewModel, FileUserDataAccessObject clearUserDataAccessObject, FileUserDataAccessObject clearUserDataAccessObject2) {
+        return null;
     }
 }

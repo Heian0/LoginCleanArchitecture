@@ -2,6 +2,7 @@ package view;
 
 import interface_adapter.LoginState;
 import interface_adapter.LoginViewModel;
+import interface_adapter.login.LoginController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -77,6 +78,9 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
         this.add(passwordInfo);
         this.add(passwordErrorField);
         this.add(buttons);
+    }
+
+    public LoginView(interface_adapter.login.LoginViewModel loginViewModel2, LoginController loginController) {
     }
 
     /**
